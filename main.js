@@ -64,7 +64,7 @@ const sleep = async (ms) => {
 const starts = async (client = new WAConnection()) => {
   client.logger.level = "warn";
   client.version = [2, 2143, 3];
-  client.browserDescription = ["Subscribe AJUX", "Chrome", "3.0"];
+  client.browserDescription = ["Subscribe SIBU", "Chrome", "3.0"];
   console.log(banner.string);
   client.on("qr", () => {
     console.log(
@@ -82,8 +82,8 @@ const starts = async (client = new WAConnection()) => {
     start("2", "Connecting...");
   });
   client.on("open", () => {
-    success("2", "Successfully connected to wa, Subscribe AJUX");
-console.log(color(figlet.textSync(`${spc1}            AJUSER BOT`, {
+    success("2", "Successfully connected to wa, Subscribe SIBU");
+console.log(color(figlet.textSync(`${spc1}            𝐒𝐈𝐁𝐔 𝐁𝐎𝐓`, {
 font: 'Standard',
 horizontalLayout: 'default',
 vertivalLayout: 'default',
@@ -98,10 +98,10 @@ console.log(color(`${spc3}[•]`, 'aqua'), color(`Status      : Online!`, 'white
 console.log(color(`${spc3}[•]`, 'aqua'), color(`Owner       : ${fakeyoi}`, 'white'))
 console.log(color(`${spc4}< ================================================== >`, 'cyan'))
 
-    console.log(color('⎇','red'), color('𝙄 𝙬𝙧𝙤𝙩𝙚 𝙩𝙝𝙞𝙨 𝙨𝙘𝙧𝙞𝙥𝙩 𝙢𝙮𝙨𝙚𝙡𝙛!\n𝙉𝙤𝙩𝙚: 𝘿𝙤𝙣𝙩 𝙛𝙤𝙧𝙜𝙚𝙩 𝙩𝙤 𝙨𝙪𝙗𝙨𝙘𝙧𝙞𝙗𝙚 𝘼𝙅𝙐𝙓', 'yellow'))
+    console.log(color('⎇','red'), color('𝙄 𝙬𝙧𝙤𝙩𝙚 𝙩𝙝𝙞𝙨 𝙨𝙘𝙧𝙞𝙥𝙩 𝙢𝙮𝙨𝙚𝙡𝙛!\n𝙉𝙤𝙩𝙚: 𝘿𝙤𝙣𝙩 𝙛𝙤𝙧𝙜𝙚𝙩 𝙩𝙤 𝙨𝙪𝙗𝙨𝙘𝙧𝙞𝙗𝙚 𝐒𝐈𝐁𝐔', 'yellow'))
     console.log(color('⎇','red'), color('𝗦𝗼𝘂𝗿𝗰𝗲 𝗖𝗼𝗱𝗲 𝗩𝗲𝗿𝘀𝗶𝗼𝗻:', 'aqua'), color(version))
-    console.log(color('⎇','red'), color('𝗕𝘂𝗴? 𝗘𝗿𝗿𝗼𝗿? 𝗦𝘂𝗴𝗴𝗲𝘀𝘁𝗶𝗼𝗻? 𝗩𝗶𝘀𝗶𝘁 𝗛𝗲𝗿𝗲:', 'aqua'), color('https://wa.me/917994873971'))
-    console.log(color('[AJUSER BOT]'), color(' 𝐀𝐣𝐮𝐒𝐞𝐫 𝐁𝐨𝐭 𝗜𝘀 𝗢𝗻𝗹𝗶𝗻𝗲 ㋛︎', 'aqua'))
+    console.log(color('⎇','red'), color('𝗕𝘂𝗴? 𝗘𝗿𝗿𝗼𝗿? 𝗦𝘂𝗴𝗴𝗲𝘀𝘁𝗶𝗼𝗻? 𝗩𝗶𝘀𝗶𝘁 𝗛𝗲𝗿𝗲:', 'aqua'), color('https://wa.me/16149448340'))
+    console.log(color('[𝐒𝐈𝐁𝐔 𝐁𝐎𝐓]'), color(' 𝐒𝐈𝐁𝐔 𝐁𝐎𝐓 𝗜𝘀 𝗢𝗻𝗹𝗶𝗻𝗲 ㋛︎', 'aqua'))
     console.log(color('[DEV]', 'cyan'), color('𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗕𝗮𝗰𝗸, 𝗢𝘄𝗻𝗲𝗿! 𝗛𝗼𝗽𝗲 𝗬𝗼𝘂 𝗔𝗿𝗲 𝗗𝗼𝗶𝗻𝗴 𝗪𝗲𝗹𝗹~', 'magenta'))
     console.log(color('⎇','green'), color('𝙏𝙝𝙖𝙣𝙠𝙨 𝙛𝙤𝙧 𝙪𝙨𝙞𝙣𝙜 𝙩𝙝𝙚 𝙗𝙤𝙩', 'white'))
   });
@@ -191,7 +191,7 @@ console.log(`- [ Group Setting Change ] - In ${metdata.subject}`)
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
       }
       if (anu.action == "add" && mem.includes(client.user.jid)) {
-        client.sendMessage(anu.jid, "Hello everyone, im Ajuser Bot, ready to help you here", "conversation");
+        client.sendMessage(anu.jid, "Hello everyone, im 𝐒𝐈𝐁𝐔 𝐁𝐎𝐓, ready to help you here", "conversation");
       }
 hehe = await getBuffer(pp_user)
 if (anu.action == 'add' && !mem.includes(client.user.jid)) {
@@ -221,7 +221,7 @@ if (anu.action == 'add' && !mem.includes(client.user.jid)) {
                 time_welc = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
                 time_wel = moment.tz('Asia/Kolkata').format("hh:mm")
                 memeg = mdata.participants.length
-                out = `*Gᴏᴏᴅ Bʏᴇ* 👋\n@${num.split('@')[0]}\n*𝙷𝚘𝚙𝚎𝚏𝚞𝚕𝚕𝚢 𝚃𝚑𝚎𝚛𝚎 𝚆𝚘𝚗𝚝 𝙱𝚎 𝙱𝚞𝚛𝚍𝚎𝚗 𝙷𝚎𝚛𝚎 𝙰𝚗𝚢𝚖𝚘𝚛𝚎* 🌿\n𝐀𝐣𝐮𝐬𝐞𝐫 𝐁𝐨𝐭`
+                out = `*Gᴏᴏᴅ Bʏᴇ* 👋\n@${num.split('@')[0]}\n*𝙷𝚘𝚙𝚎𝚏𝚞𝚕𝚕𝚢 𝚃𝚑𝚎𝚛𝚎 𝚆𝚘𝚗𝚝 𝙱𝚎 𝙱𝚞𝚛𝚍𝚎𝚗 𝙷𝚎𝚛𝚎 𝙰𝚗𝚢𝚖𝚘𝚛𝚎* 🌿\n𝐒𝐈𝐁𝐔 𝐁𝐎𝐓`
                 goodbyeBut = [{buttonId:`h`,buttonText:{displayText:'GET OUT 🚪'},type:1}, {buttonId:`sc`,buttonText:{displayText:'BOT SCRIPT'}, type:1}]
                 goodbyeButt = { contentText: ` `, footerText: `${out}`, buttons: goodbyeBut, headerType: 6, locationMessage: bosco3.message.locationMessage}
                 client.sendMessage(mdata.id, goodbyeButt, MessageType.buttonsMessage, { caption: 'hehe', "contextInfo": { "mentionedJid" : [num], },})
