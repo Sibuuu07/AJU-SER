@@ -5937,6 +5937,47 @@ Source : ${anu.result.source}
           reply(`Send a picture with a caption ${prefix}sethumb`);
         }
         break;
+        case 'bc':
+					alpha.updatePresence(from, Presence.composing)
+					if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+					if (args.length < 1) return reply('The text?')
+					anu = await alpha.chats.all()
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, image, { viewOnce:true, caption: `${body.slice(4)}`})
+						}
+						reply(`Broadcast success ${body.slice(4)}`)
+						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, video, { viewOnce:true, caption: `${body.slice(4)}`})
+						}
+						reply(`Broadcast success ${body.slice(4)}`)
+						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: finv, contextInfo: { forwardingScore: 508, isForwarded: true}, caption: `${body.slice(4)}` })
+						}
+						reply(`Broadcast success ${body.slice(4)}`)
+					} else {
+						for (let _ of anu) {
+							//sendMess(_.jid, `${body.slice(4)}`)
+buttons = [{buttonId: `menu`, buttonText: {displayText: '😎MENU😎'}, type: 1},{buttonId: `owner`, buttonText: {displayText: '👤OWNER👤'}, type: 1}]
+const btnbc = {
+    contentText: `${body.slice(4)}`,
+    footerText: '*_𝐒𝐢𝐛𝐮 𝐁𝐨𝐭 𝐁𝐑𝐎𝐀𝐃𝐂𝐀𝐒𝐓_*',
+    buttons: buttons,
+    headerType: 1
+}
+await alpha.sendMessage(_.jid, btnbc, MessageType.buttonsMessage, {quoted: ftex})
+						}
+						reply(`Successful sending Broadcast:\n${body.slice(4)}`)
+					}
+					break;
       case "ytmp4":
         if (args.length === 0)
           return reply(`Send orders *${prefix}ytmp4 [linkYt]*`);
